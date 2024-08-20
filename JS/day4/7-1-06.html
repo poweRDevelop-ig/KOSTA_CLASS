@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const rects = document.querySelector('.rect')
+
+            rects.forEach((rect, index) => {
+                const width = (index+1)*100
+                const scr = `https://picsum.photos/${width}/250?ramdom=${index}`
+                rect.setAttribute('src',src)
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <img class="rect">
+    <img class="rect">
+    <img class="rect">
+    <img class="rect">
+    <img class="rect">
+</body>
+</html>

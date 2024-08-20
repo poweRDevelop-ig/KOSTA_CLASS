@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        const rawinput = prompt('궁금한 해를 입력','')
+        const year = Number(rawinput)
+
+        function isLeapYear(year) { //매개변수
+            return (year%4===0)&&(year%100!==0)||(yaer%400===0) //retrun은 뭔가
+        }
+              
+        if (isLeapYear) {result = '윤년'}
+        else {result = '안윤년'}
+
+        alert(`${year}년은 ${result} 입니다.` )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
