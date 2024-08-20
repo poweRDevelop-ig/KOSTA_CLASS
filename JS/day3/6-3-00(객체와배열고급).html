@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            속성 존재 여부 확인
+            객체 내부에 어떤 속성이 있는지 확인하는 코드는 광장히 자주 사용
+            내가 직접 코드는 물론 남이 만드 코드를 이해할 때도 필요
+            조건문으로 undefined인지 아닌지 확인하면 속성 존재 여부를 확인할 수 있음
+
+        */
+
+        //객체를 생성합니다
+        const object = {
+            name:'혼자 공부하는 파이썬',
+            price:18000,
+            publisher:'한빛미디어'
+        }
+
+        //객체 내붕레 속성이 있는지 확인합니다.
+        if (object.name !== undefined) {
+            console.log('name 속성이 있습니다')
+        }else{
+            console.log('name 속성이 없습니다')
+        }
+
+        if (object.author !== undefined) {
+            console.log('author 속성이 있습니다')
+        }else{
+            console.log('author 속성이 없습니다')
+        }
+
+        /*
+        더짧게도 가능
+        object.name || console.log('name 속성이 있습니다')
+        object.name || console.log('author 속성이 있습니다')
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

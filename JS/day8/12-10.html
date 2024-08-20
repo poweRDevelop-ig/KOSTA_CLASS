@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansoty</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .box {
+            background: black;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script>
+
+        //이벤트를 연결합니다
+        $(document).ready(function () {
+             //문서 객체를 생성합니다
+             for (let i=0; i<300; i++) {
+                $('<div></div>').addClass('box').css({
+                    width: 100,
+                    height: Math.floor(Math.random() * 100) +50
+                }).appendTo('body')
+             }
+             //마손리 플러그인 적용
+             $('body').masonry({
+                columnWidth: 110
+             })
+        })
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

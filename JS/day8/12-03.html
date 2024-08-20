@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Animation</title>
+    <script>
+
+        window.onload = function () {
+            //변수를 선언합니다
+            let count = 0
+            const imageBasePath = 'C:\Users\KOSTA\study\JS\img\ani'
+            let image = document.getElementById('image')
+            let frames = [
+                'imageBasePath + 0.png', 
+                'imageBasePath + 1.png', 
+                'imageBasePath + 2.png', 
+                'imageBasePath + 3.png', 
+                'imageBasePath + 4.png', 
+                'imageBasePath + 5.png', 
+                'imageBasePath + 6.png', 
+                'imageBasePath + 7.png', 
+                'imageBasePath + 8.png', 
+                'imageBasePath + 9.png', 
+                'imageBasePath + 10.png', 
+                'imageBasePath + 11.png', 
+                'imageBasePath + 12.png', 
+                'imageBasePath + 13.png',
+                'imageBasePath + 14.png'
+            ]
+            
+
+            //타이머 반복을 시작합니다
+            setInterval(function () {
+                image.src = frames[count % frames.length]   //0,1,2,3,... 반복
+                count = count + 1
+            }, 1000 / 20)
+        }
+
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>

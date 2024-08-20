@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            문서를 어떤 문서 아래에 둘지 정하기 위해 문서 객체 트리 구조를 알아야 한다.
+            doucument.creatElement() 메소드로 h1 태그르 생성하고
+            이를 document.body 태그 아래에 추가하는 코드
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            //문서 객체 읽어들이고 생성하기 
+            const divA = document.querySelector('#first')       //h1을 divA에 추가
+            const divB = document.querySelector('#second')      //1초 뒤에 second 함수 실행
+            const h1 = document.createElement('h1')             //h1 태그를 생성
+            h1.textContent = '이동하는 h1 태그'
+
+            //서로 번갈아가면서 실행하는 함수를 구현합니다
+            const toFirst = () => {
+                divA.appendChild(h1)        //h1을 디브에에 추가
+                setTimeout(toSecond,500)   //1초 뒹에 투섹ㅎ마 실행
+            } 
+            const toSecond = () => {
+                divB.appendChild(h1)        //h1을 디브비에 추가
+                setTimeout(toFirst,1000)   //10초 뒤에 투펋마 실행
+            }
+            toFirst()
+        })
+
+    </script>
+</head>
+<body>
+    <div id="first">
+        <h1>첫번째 디브 태그 내부</h1>
+    </div>
+
+    <div id="second">
+        <h1>두번째 디브 태그 내부</h1>
+    </div>
+</body>
+</html>

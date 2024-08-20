@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script>
+
+        /*
+        [[[   Lodash 라이브러리   ]]]
+        
+        개발할 때 보조적으로 사용하는 함수들을 제공해주는 유틸리티 라이브러리 중 가장 많이 사용
+        https://lodash.com/
+
+        Luxon와 date-fns: 날짜와 시간을 쉽게 다루는 라이브러리
+        Handson ...
+
+        */
+        
+        //데이터를 생성합니다
+        const books = [{
+            name:'혼자 공부하는 파이썬',
+            price:18000,
+            publisher:'한빛미디어'
+
+         },{
+            name:'HTML5 웹 프로그래밍 입문',
+            price:26000,
+            publisher:'한빛아카데미'
+        },{
+            name:'머신러닝, 딥러닝 실전',
+            price:30000,
+            publisher:'위키북스'
+        },{
+            name:'딥러닝을 위한 수학',
+            price:25000,
+            publisher:'한빛아카데미'
+         }]
+
+         //가격으로 정렬한 뒤 출력합니다.
+         const output=_.sortBy(books,(book)=>book.price)
+         console.log(JSON.stringify(output, null, 2))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

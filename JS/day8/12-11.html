@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div.item:nth-child(1) {background: rgb(117, 10, 189);}
+        div.item:nth-child(2) {background: rgb(71, 123, 165);}
+        div.item:nth-child(3) {background: rgb(163, 32, 32);}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        //[[[  슬라이더 효과   ]]]
+
+        //첫번째 레디이벤트
+        $(document).ready(function () {
+            //변수를 선언합니다.
+            let width = $('[data-role-="slider"]').attr('data-width')
+            let height = $('[data-role-="slider"]').attr('data-height')
+            let count = $('[data-role="slider"] div.item').length
+
+            //스타일을 적용
+            $('[data-role="slider"]').css({
+                position: 'relative',
+                overflow: 'hidden',
+                width: width,
+                height: height
+            }).find('.container').css({
+                position: 'absolute',
+                width: count*width,
+                overflow: 'hidden'
+            }).find('.item').css({
+                width: width,
+                height: height,
+                float: 'left'
+            })
+
+ 
+        
+           //변수를 선언합니다
+            let currentPage = 0;
+            let changePage = function () {
+                $('[data-role="slider"] > .container').animate({
+                    left: - currentPage*width
+                }, 500)
+            }
+
+            //이벤트를 연결합니다
+            $('#left-bt').click(function () {
+                if (currentPage >0) {
+                    //왼쪽으로 이동
+                    currentPage = currentPage -1
+                    changePage()
+                }
+            })
+            $('#right-bt').click(function () {
+                if (currentPage < count-1) {
+                    //왼쪽으로 이동
+                    currentPage = currentPage +1
+                    changePage()
+                }
+            })            
+         })
+    </script>
+</head>
+<body>
+    <div data-role="slider" data-width="500" data-height="300">
+        <div class="container">
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan orci eget nibh tincidunt dignissim.
+                     Morbi vel gravida risus. Mauris orci sapien, auctor a ultricies eu, pulvinar eu diam. Nulla sed lectus neque. 
+                     Nam at quam sed dui varius auctor. Donec volutpat et ligula porttitor porttitor. Vestibulum non diam accumsan,
+                      tincidunt quam ut, gravida diam. Nulla placerat eget turpis sed feugiat. Curabitur nunc sapien, porta sed leo vel, 
+                      viverra vulputate lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac 
+                      turpis egestas. Aliquam pretium libero ac tincidunt ultrices. Curabitur pretium orci id tortor efficitur, 
+                      vitae lacinia velit tincidunt.</p>
+            </div>
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan orci eget nibh tincidunt dignissim. 
+                    Morbi vel gravida risus. Mauris orci sapien, auctor a ultricies eu, pulvinar eu diam. Nulla sed lectus neque. 
+                    Nam at quam sed dui varius auctor. Donec volutpat et ligula porttitor porttitor. Vestibulum non diam accumsan, 
+                    tincidunt quam ut, gravida diam. Nulla placerat eget turpis sed feugiat. Curabitur nunc sapien, porta sed leo vel, 
+                    viverra vulputate lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                     turpis egestas. Aliquam pretium libero ac tincidunt ultrices. Curabitur pretium orci id tortor efficitur, 
+                     vitae lacinia velit tincidunt.</p>
+            </div>
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan orci eget nibh tincidunt dignissim. 
+                    Morbi vel gravida risus. Mauris orci sapien, auctor a ultricies eu, pulvinar eu diam. Nulla sed lectus neque. 
+                    Nam at quam sed dui varius auctor. Donec volutpat et ligula porttitor porttitor. Vestibulum non diam accumsan,
+                     tincidunt quam ut, gravida diam. Nulla placerat eget turpis sed feugiat. Curabitur nunc sapien, porta sed leo vel,
+                      viverra vulputate lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                       turpis egestas. Aliquam pretium libero ac tincidunt ultrices. Curabitur pretium orci id tortor efficitur,
+                        vitae lacinia velit tincidunt.</p>
+            </div>
+        </div>
+    </div>
+        <button id="left-bt">oo</button>
+        <button id="right-bt">oo</button>
+    
+</body>
+</html>

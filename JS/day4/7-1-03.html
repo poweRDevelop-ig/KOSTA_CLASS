@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /*
+            문서 객체 가져오기
+            document.querySelector(선택자)
+            document.querySelectorAll(선택자)
+         */
+        document.addEventListener('DOMContentLoaded',()=>{
+            //요소를 읽어들입니다
+            const header = document.querySelector('h1')  //-->h1 태그를 요소로 선택
+
+            //텍스트와 스타일을 변경
+            header.textContent = 'HEADERS'
+            header.style.color = 'white'
+            header.style.backgroundColor = 'black'
+            header.style.padding = '10px'
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

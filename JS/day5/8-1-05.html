@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function test() {
+            try{
+                alert('A위치입니다')
+                throw "강제예외발생"
+            }catch(exception){
+                alert('B위치입니다')
+                return
+            }finally{                   //finally 구문은 반드시 실행됨
+                alert('C위치입니다')
+            }
+        }
+
+        //함수를 호출
+        test()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

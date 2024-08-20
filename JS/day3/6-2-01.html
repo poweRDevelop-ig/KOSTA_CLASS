@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //prototype 객체에 속성과 메소드를 추가하면 모든 개체(와 기본 자료형)에서
+        //해당 속성과 메소드를 사용할 수 있음
+        //프로토타입에 공용 메소드를 작성한다
+
+        //power() 메소드를 추가합니다
+        Number.prototype.power = function(n=2) {
+            return this.valueOf()**n
+        }
+        
+        //Number 객체의 power() 메소드를 사용합니다.
+        const a =12
+        console.log('a.power():',a.power())     //기본적으로 n=2
+        console.log('a.power(3):',a.power(3))   //n=3
+        console.log('a.power(4):',a.power(4))   //n=4
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

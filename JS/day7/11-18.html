@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        //이벤트연결
+        $(document).ready(function () {
+            //이벤트를 연결
+            $('a').click(function (event) {
+                //출력합니다
+                alert('click')
+                //기본이벤트를 제거
+                event.preventDefault() //제거 안 하면 링크로 이동
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="http://hanbit.co.kr">한빛출판</a>
+</body>
+</html>
