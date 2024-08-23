@@ -262,3 +262,124 @@
     }
 
 /* End what_I_do.css */
+/* bg */
+
+    .bg{
+        background: url(./images/background.jpg) center center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 650px;
+    }
+
+/* Ebg */
+/* portfolio */
+    /* 포폴사각형 */
+    section.portfolio .portfolio-inner{
+        width: 30%;
+        margin-right: 5%;
+        padding: 1rem 1rem 1.5rem 1rem;
+        float: left;
+        background-color: #f8f8f8;
+        border: 1px solid #ccc;
+        margin-bottom: 3rem;
+    }
+    /* 3번째마다 마진라잍 0 적용 */
+    section.portfolio .portfolio-inner:nth-child(3n){
+        margin-right: 0;
+    }
+    /* 이미지의크기가부모요소를넘지않도록100로지정 */
+    section.portfolio .portfolio-inner img{
+        width: 100%;
+        display: block;
+    }
+    /* 스트롱태그색상과간격 */
+    section.portfolio .portfolio-inner strong{
+        color: #ff6a6a;
+        margin: 0.5rem 0;
+        display: block;
+    }
+    /* h2태그색상과간격 */
+    section.portfolio .portfolio-inner h3{
+        font-size: 1.75rem;
+    }
+/* EndPF */
+/* contact-with-me.css */
+    section.contact .contact-me::after{
+        content:"";
+        display: block;
+        clear: both;
+    }
+    section.contact .contact-me .left{
+        width: 30%;
+        float: left;
+    }
+    section.contact .contact-me .right{
+        float: left;
+        width: 65%;
+        margin-left: 5%;
+    }
+    section.contact .contact-me .left .card{
+        border: 1px solid #ccc;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 1.25rem;
+    }
+    section.contact .contact-me .left .card .icon i{
+        font-size: 2rem;
+        margin-right: 5px;
+    }
+    section.contact .contact-me .right{
+        float: left;
+        width: 65%;
+        margin-left: 5%;
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+    }
+    /* 폼그룹 사이간격지정 */
+    section.contact .contact-me .right .form-group{
+        margin-bottom: 1.25rem;
+    }
+    /* 라벨태그가 인라인성격이여서 외부 여백을 적용하기 위해 블록으로 변경 */
+    section.contact .contact-me .right .form-group label{
+        display: block;
+        margin-bottom: 0.85rem;
+    }
+    /* 인풋요소 꾸미기 */
+    section.contact .contact-me .right .form-group input{
+        pad: 0.625rem;
+        width: 100%;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 10px; 
+    }
+    /* 포커스 가상 클래스 선택자로 입력 요ㅑ소에
+    커서가 활성화되면 파란색 테두리와 그림자 효과 추가 */
+    section.contact .contact-me .right .form-group input:focus{
+        border: 1px solid #719ece;
+        box-shadow: 0 0 10px #719ece;
+    }
+    /* 텍스트에리어 요소 꾸미기 */
+    section.contact .contact-me .right .form-group textarea{
+        height: 300px; width: 100px;
+        resize: none;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    /* 텍스트요소에 커서 활성화가 되면 파란색 테두리와 그림자 효과 추가 */
+    section.contact .contact-me .right .form-group textarea:focus{
+        outline: none;
+        border: 1px solid #719ece;
+        box-shadow: 0 0 10px #719ece;
+    }
+    /* 버튼요소꾸미기 */
+    section.contact .contact-me .right button{
+        width: 100%;
+        padding: 1rem;
+        background-color: #f78b00;
+        border: none;
+        column-rule: white;
+    }
+/* End contact-with-me.css */
