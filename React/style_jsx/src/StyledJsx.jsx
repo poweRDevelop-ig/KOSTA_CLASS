@@ -1,9 +1,9 @@
 export const StyledJsx = () => {
     return (
         <>
-            <div id="container">
-                <p>Style JSX입니다</p>
-                <button>버튼</button>
+            <div className="container">
+                <p className="title">Style JSX입니다</p>
+                <button className="button">버튼</button>
             </div>
 
             <style jsx>{`
