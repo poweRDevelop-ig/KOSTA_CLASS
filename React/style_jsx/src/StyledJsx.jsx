@@ -1,0 +1,30 @@
+export const StyledJsx = () => {
+    return (
+        <>
+            <div id="container">
+                <p>Style JSX입니다</p>
+                <button>버튼</button>
+            </div>
+
+            <style jsx>{`
+                .container {
+                    border: solid 1px #aaa;
+                    border-radius: 20px;
+                    padding: 8px; margin: 8px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                .title {
+                    margin: 0; color: #aaa;
+                }
+                .button {
+                    background-color: #ddd;
+                    bottom: none;
+                    padding: 8px;
+                    border-radius: 8px;
+                }
+            `}</style>
+        </>
+    )
+}
