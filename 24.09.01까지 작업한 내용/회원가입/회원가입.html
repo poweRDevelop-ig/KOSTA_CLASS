@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./회원가입.css">
+    <script src="./회원가입.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <form neme="register-form" id="register-form">
+                <div class="form-header">
+                <h2>회원가입하기</h2>                                                         
+                </div>
+                <div class="input-wrapper">
+                    <label for="email">이메일</label>
+                    <input id="email" name="email" type="email" />
+                    <p class="err-msg" id="email-err-msg">이메일을 입력해 주세요.</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="username">이름</label>
+                    <input id="username" name="username" type="text" />
+                    <p class="err-msg" id="username-err-msg">이름을 입력해 주세요.</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="password">비밀번호</label>
+                    <input id="password" name="password" type="password" />
+                    <p class="err-msg" id="password-err-msg">비밀번호를 입력해 주세요.</p>
+                </div>
+                <div class="input-wrapper">
+                    <label for="password-check">비밀번호 확인</label>
+                    <input id="password-check" name="password-check" type="password" />
+                    <p class="err-msg" id="password-check-err-msg">비밀번호 확인은 필수 입력값입니다.</p>
+                </div>
+                <!-- button 기본 type="submit" 이라서 바꿔준다 -->
+                <button type="button" onclick="onRegister()">회원가입 하기</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
