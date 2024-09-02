@@ -220,10 +220,23 @@ section{
     line-height: 1.5rem;
 }
 .brand {
+    width: 90%;
+    display: flex;
     font-size: 15px;
     padding: 10px;
+    
+    text-align: justify;
+    
+    background-color: skyblue;
+}
 
-
+.brand .like {
+    /* display: block; */
+    text-align: right;
+    justify-content: right;
+    justify-items: right;
+    background-color: blue;
+    
 }
 
 .footer{

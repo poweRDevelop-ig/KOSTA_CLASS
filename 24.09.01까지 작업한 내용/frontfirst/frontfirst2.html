@@ -9,6 +9,15 @@
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/def66b134a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    
+    <!-- 확인용 스크립트 지우거나 js 파일로 옮겨주기 -->
+    <script>
+     function clearTextarea() {
+        document.getElementById('input-search').value = '';
+      }
+      </script>
     <title>Document</title>
 </head>
 <body>
@@ -31,8 +40,8 @@
 <!-- search -->
                 <div class="search">
                     <form action="">
-                        <input type="text" class="input-search">
-                        <input type="submit" class="input-search-submit" value="검색">
+                        <input type="text" class="input-search" value="차 이름을 검색해주세요." id="input-search" onclick="clearTextarea()" >
+                        <input type= "submit" class="input-search-submit" value="검색">
                     </form>
                 </div>                  
             </div>
@@ -45,7 +54,7 @@
     <aside class="">
         <div class="accordion">
             <input type="checkbox" id="car_select01">
-            <label for="car_select01">brand<img src="./arrow down.png"></img></label>
+            <label for="car_select01">brand 이거는 한글로하자<img src="./arrow down.png"></img></label>
             <div class="sidebar"  >
                 <div class="brand" >
                     <ul class="">
@@ -247,6 +256,7 @@
                 </div>
                 <div class="brand">
                     <div>판매자 : <span> 누구게</span></div>
+                    <div class="like"><i class="fa-solid fa-heart">0</i></div>
                 </div>
             </div>
     
