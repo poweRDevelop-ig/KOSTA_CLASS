@@ -224,19 +224,10 @@ section{
     display: flex;
     font-size: 15px;
     padding: 10px;
-    
+    justify-content: space-between;
     text-align: justify;
     
-    background-color: skyblue;
-}
-
-.brand .like {
-    /* display: block; */
-    text-align: right;
-    justify-content: right;
-    justify-items: right;
-    background-color: blue;
-    
+ 
 }
 
 .footer{
