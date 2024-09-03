@@ -9,13 +9,11 @@
     
 
 }
-
 .container{
     width: 1280px;
     margin: auto;
     
 }
-
 .main-header {
    
     display: flex;
@@ -127,15 +125,15 @@ input[id*="car_select"] + label {
     cursor: pointer;
     position: relative;
 }
-input[id*="car_select"] + label em {
+input[id*="car_select"] + label img {
     position: absolute;
-    top: 50%;
+    top: 63%;
     right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 16px;
+    height: 16px;
     margin-top: -15px;
     display: inline-block;
-    background:url() 0 0 no-repeat;
+
 }
 input[id*="car_select"] + label + div{
     max-height: 0;
@@ -160,37 +158,47 @@ input[id*="car_select"]:checked + label em {background-position: 0 -30px;}
 
 /* section */
 section{
-    display: flex;
+    /* display: flex; */
     background-color: #fff;
-    width: 1040px;
+    /* width: 1040px; */
+    width: calc(100% - 322px);
     height: auto;
     margin: 0 auto;
     padding: 30px 40px 0px 40px ;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction:row; 
+    /* flex-wrap: wrap;
+    flex-direction:row;  */
+    
 }
 
 .car-icons {
  /* 카드 간격 다시 조정 */
-    width: 290px;
+    width: 270px;
     height: auto;
     margin-top: 10px;
     padding: 0 10px 15px 0;
     font-size: 11px;
-    border: 1px solid black;
+    border: none;
     background-color: white;
-    
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    /*row로 간격을 맞춤 270px로 했더니 잘 맞으나 추후에 변동이 있을경우 여기 width 나 마진값을 바꿔야함*/
 
 }
-.car-icons:not(:last-child){
-    margin-right: 10px;
+/* .car-icons:not(:last-child){
+    margin-right: 20px;
+    margin-left: 20px;
     
-}
+} */
 
 .car-icons:hover{
     height: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.411);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
+    transition: all .35s;
+
 }
 
 
@@ -212,9 +220,26 @@ section{
     line-height: 1.5rem;
 }
 .brand {
+    width: 90%;
+    display: flex;
     font-size: 15px;
     padding: 10px;
-
-
+    justify-content: space-between;
+    text-align: justify;
+    
+ 
 }
 
+.footer{
+    width: 100%;
+    height: 50px;
+    background: pink;
+}
+
+.row {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: flex;
+    justify-content: left;
+}
