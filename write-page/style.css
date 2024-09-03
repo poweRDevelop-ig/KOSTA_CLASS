@@ -98,61 +98,41 @@
         height: auto;
 }
 
-/* aside */
 
-aside{
-    /* background-color: skyblue; */
-    width: 240px;
-    height: auto;
-}
 
-/* accordion */
-.accordion{
-    width: 240px;
-    height: auto;
-}
-input[id*="car_select"]{
-    display: none;
-}
-input[id*="car_select"] + label {
-    display: block;
-    padding: 15px;
-    border: 1px solid #232188;
-    border-bottom: 0;
-    color: #fff;
-    font-weight: 900;
-    background: #3634a5;
-    cursor: pointer;
-    position: relative;
-}
-input[id*="car_select"] + label img {
-    position: absolute;
-    top: 63%;
-    right: 10px;
-    width: 16px;
-    height: 16px;
-    margin-top: -15px;
-    display: inline-block;
+/* ================================================================================================== */
 
+table { margin: auto; }
+input.input-title[type="text"], textarea {
+    border: 1.5px solid rgb(68, 136, 244);
+    width: 800px;
+    border-radius: 5px;
+    padding: 10px;
 }
-input[id*="car_select"] + label + div{
-    max-height: 0;
-    transition: all .35s;
-    overflow: hidden;
-    background: #ebf8ff;
-
+textarea { height: 400px; resize: none; }
+input.submit-button[type="submit"] {
+    width: 100px;
+    height: 40px;                              
+    font-size: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(164, 199, 255);
 }
-input[id*="car_select"] + label + div p {
-    display: inline-block;
-    padding: 20px;
-    /* 나중에 지울 수 있음 구간 나누는데 쓰임 */
-}
-input[id*="car_select"]:checked + label + div {max-height: 300px;}
-input[id*="car_select"]:checked + label em {background-position: 0 -30px;}
-
-/* 사이드바 세부내용 추후에 수정 */
-.sidebar{
-    display: block;
+input[type="submit"]:active {
+    background-color: rgb(68, 136, 244);
 }
 
 /* ================================================================================================== */
+.footer{
+    width: 100%;
+    height: 50px;
+    background: pink;
+}
+
+.row {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: flex;
+    justify-content: left;
+}

@@ -1,12 +1,4 @@
-<script>
-  {/* $(document).ready(function() {
-    $('.car-image-slider.slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    })
-}); */}
-
-
-</script>
+function showImage(element) {
+    var mainImage = document.getElementById('main-image');
+    mainImage.src = element.src;
+}

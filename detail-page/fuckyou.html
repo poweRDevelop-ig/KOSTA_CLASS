@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var photo = document.getElementById("photo");
+        var thumbnail = document.querySelectorAll("#gallery > li > img");
+
+        for ( var i = 0; i < thumbnail.length; i++ )
+        thumbnail[i].addEventListener("click", function () {
+
+            photo.setAttribute("src", this.getAttribute("src"));
+
+        });
+    </script>
+    <style>
+        #container{margin-bottom: 80px;}
+        #photo{
+        display: block;
+        width: 960px;
+        border: 10px solid black;
+        margin: 0 auto;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+        }
+        #gallery{text-align: center;}
+        
+        #gallery > li {
+        display: inline-block;
+        margin: 0 10px;
+        }
+        
+        #gallery > li > img{
+        display: block;
+        width: 200px;
+        border: 5px solid black;
+        cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./img/front.jfif" alt="photo" id="photo">
+    </div>
+ 
+    <ul id="gallery">
+        <li><img src="./img/front.jfif" alt="thumbnail"></li>
+        <li><img src="./img/inside-center.jfif" alt="thumbnail"></li>
+        <li><img src="./img/side-back.jfif" alt="thumbnail"></li>
+        <li><img src="./img/wheels.jfif" alt="thumbnail"></li>
+    </ul>
+</body>
+</html>
