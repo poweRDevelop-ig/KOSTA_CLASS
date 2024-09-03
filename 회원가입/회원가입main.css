@@ -1,11 +1,16 @@
 *{
- 
     margin: 0px;
     padding: 0px;
+    margin: 0 auto;   
     justify-content: center;
     align-items: center;
 }
-
+.membership{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 h2{
     font-size: 30px;
 }
