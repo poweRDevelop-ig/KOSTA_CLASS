@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        ul li {
+  position: relative;
+}
+
+ul li label {
+  display: block;
+  padding: 10px;
+}
+
+ul li label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    </style>
+    <!-- <script>
+        const listItems = document.querySelectorAll('li');
+
+listItems.forEach(item => {
+  const label = item.querySelector('label');
+  const checkbox = item.querySelector('input[type="checkbox"]');
+ 
+label.addEventListener('click', (event) => {
+    if (event.target === label) {
+      checkbox.checked = !checkbox.checked;
+    }
+  });
+});
+    </script> -->
+</head>
+<body>
+    <ul>
+        <li>
+          <label>
+            <input type="checkbox">
+            <span>텍스트</span>
+          </label>
+        </li>
+        </ul>
+
+
+
+
+
+
+
+        <form action="">
+          <table border="1">
+              <tr>
+                  <td><label for="username">이름</label></td>
+                  <td><input id="username" type="text" name="username"></td>
+              </tr>
+              <tr>
+                  <td>성별</td>
+                  <td>
+                      <input id="man" type="radio" name="gender" value="m">
+                      <label for="man">남자</label>
+                      <input id="woman" type="radio" name="gender" value="m">
+                      <label for="woman">여자</label>
+                  </td>
+              </tr>
+          </table>
+          <input type="submit" value="가입">
+      </form>
+  
+      <label for="radio">라디오 : </label>
+        <input id="radio" type="radio"><br>
+
+      
+</body>
+</html>
