@@ -28,35 +28,38 @@ h2{
 .mbs_id {
     width: 80%;
     font-size: 15px;
+    margin-top: 10px;
     /* background-color: orange; */
 }
-input{
+#membership_id,
+#membership_pw,
+#membership_pw2,
+#membership_name,
+#phoneNumber
+{
     width: 100%;
-    height: 64px;
+    height: 20px;
     box-sizing: border-box;
     padding: 20px 16px;
-    /* 박스 테두리 둥글게 */
     border-radius: 16px;
     background-color: orange(256, 256, 256, 0.05);
     border: 1px solid orange;
     color: black;
 }
-.form-group{
-    width: 100%;
-    height: 64px;
-    box-sizing: border-box;
-    border: 1px solid black;
-}
-input {
 
-    height: 20px;
+#profileImage{
+   margin: 0;
+ 
+    float: left;
+    align-items: center;
+    justify-content: center;
 }
+
 button{
-   /* width: 100%;
-    height: 64px;
+   /*
     box-sizing: border-box;
     padding: 20px 16px;
-   border-radius: 16px; */
+ */
    margin-top: 15px;
    margin-bottom: 15px;
    width: 100px;
@@ -68,9 +71,22 @@ button{
     cursor: pointer;
     border-radius: 15px;
    
-
-   /* background-color: aqua; */
 }
+
+input[type=file]::file-selector-button {
+  width: 150px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid orange;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+input[type=file]::file-selector-button:hover {
+    background: #999999;
+    color: #fff;
+    cursor: pointer;
+  }
 .err-msg{
     color:red;
     padding: 0 16px;

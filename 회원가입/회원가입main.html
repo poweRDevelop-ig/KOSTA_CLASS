@@ -47,25 +47,26 @@
 
             </div>
 
-            <div class="form-group">
-                <label for="phoneNumber">핸드폰 번호</label>
-                <input type="text" id="phoneNumber" name="phoneNumber" pattern="\d{3}-\d{4}-\d{4}" placeholder="010-XXXX-XXXX">
-                <p class="error-msg" id="phoneNumber-error">올바른 핸드폰 번호를 입력해주세요.</p>
+            <div class="mbs_id">
+                <label for="phoneNumber">핸드폰 번호</label><br>
+                <input type="text" id="phoneNumber" name="phoneNumber" maxlength="13" pattern="\d{3}-\d{4}-\d{4}" placeholder="010-XXXX-XXXX">
             </div>
-
-            <div class="form-group">
-                <label for="profileImage">프로필 사진</label>
-                <input type="file" id="profileImage" name="profileImage" accept="image/*">
-            </div>
-         
-            <div class="form-group">
-                <label for="userRole">판매자/구매자</label>
-                <input type="radio" id="seller" name="userRole" value="seller"> 판매자
-                <input type="radio" id="buyer" name="userRole" value="buyer"> 구매자
+            <div class="mbs_id">
+                <label for="profileImage" id="profileImage">프로필 사진<br></label><br>
+                <input type="file" id="profileImage" name="profileImage" accept=".JFIF, .JPG, .PNG, .GIF">
             </div>
                 
+            <div class="mbs_id">
+                <div class="seller_buyer">
+                     <input type="radio" id="seller" value="판매자" name="user_role">
+                    <label for="seller">판매자</label>
+                    <input type="radio" id="buyer" value="구매자" name="user_role">
+                    <label for="buyer">구매자</label>
+                </div>
+                
+            </div>
 
-
+       
 
 
             <div class="button">
