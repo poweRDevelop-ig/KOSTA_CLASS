@@ -101,35 +101,24 @@
 
 
 /* ================================================================================================== */
-
 section{
-    padding-left: 15%;
-    padding-top: 3%;
-    padding-bottom: 4%;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
-.container.mt-3 {
-    align-items: center;
+
+.list-list{
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
-table{
-    width: 60%;
+.table{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }
-input.input-title[type="text"], textarea {
-    border: 1.5px solid rgb(68, 136, 244);
-    width: 800px;
-    border-radius: 5px;
-    padding: 10px;
-}
-textarea { height: 400px; resize: none; }
-input.submit-button[type="submit"] {
-    width: 100px;
-    height: 40px;                              
-    font-size: 15px;
-    border: 0;
-    border-radius: 5px;
-    background-color: rgb(164, 199, 255);
-}
-input[type="submit"]:active {
-    background-color: rgb(68, 136, 244);
+.date{
+    width: 20%;
+    text-align: center;
 }
 
 /* ================================================================================================== */

@@ -102,11 +102,12 @@
                                                                                 
 section {
     width: 1280px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 /* -------------------------------------------------------------------- */
 .car-info-article {
     width: 1280px; height: auto;
-    border: 1px solid black;
 }
 .car-info-left {
     float: left;
@@ -202,18 +203,32 @@ section {
 }
 
 /* ---------------------------------------------------------------------- */
+h3{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+table{
+    height: 30%;
+    /* border-collapse: collapse;
+    border: 1px solid #646464; */
+}
 
 .info-wrap {
     width: 1280px;
     height: 340px;
     /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
 }
 .basic-info {
-    width: 50%;
+    width: 40%;
     height: 340px;
     float: left;
     /* text-align: center; */
     /* border: 1px solid black; */
+    border-right: 1.5px solid #cacaca;
 }
 .basic-info.h4 {
     width: 50%;
@@ -228,7 +243,7 @@ section {
 }
 .seller-info {
     position: relative;
-    width: 50%;
+    width: 40%;
     height: 340px;
     float: right;
     /* text-align: center; */
