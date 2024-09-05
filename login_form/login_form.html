@@ -6,47 +6,38 @@
     <link rel="stylesheet" href="login_form.css">
     <script src="./login_form.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
-     <!-- 확인용 스크립트 지우거나 js 파일로 옮겨주기 -->
-     <script>
-        function clearTextareaid() {
-           document.getElementById('userid').value = '';
-         }
-         function clearTextareapw() {
-           document.getElementById('password').value = '';
-         }
-         </script>
-
+    
     <title>Document</title>
 </head>
 <body>
 
     <div class="login-main">
-        
-            <h2>로그인 해주세요</h2>
-            <p>사이트를 이용하시려면 로그인 해주세요</p>
-        
-     <div class="form-header">
-        <form name="textForm" id="textForm" method="post">
-
-          <div class="login-id">   
-          <!-- <label for="userid">아이디 :</label> -->
-          <input type="text" name="userid" id="userid" maxlength="15" value="아이디를 입력해주세요." onclick="clearTextareaid()"><br>
+        <form name="textForm" class="textForm" id="textForm" method="post">
+          <div>
+            <h2>로 그 인</h2>
+            <p style="font-size: 14px">사이트를 이용하시려면 로그인 해주세요</p>
           </div>
+        <div class="login-id">   
+          <label for="useridinput" id="useridlabel">아이디</l abel>
+          <input type="text" name="userid" id="useridinput" maxlength="15" ><br>
+          <p class="err-msg" id="userid-error-msg">아이디를 입력해주세요.</p>
+        </div>
 
-          <div class="login-pw">
-          <!-- <label for="password">패스워드 :</label> -->
-          <input type="password" name="password" id="password" maxlength="15" value="비밀번호를 입력해주세요." onclick="clearTextareapw()"><br>
-          </div>
+        <div class="login-pw">
+          <label for="passwordinput"id="passwordlabel">패스워드</label>
+          <input type="password" name="password" id="passwordinput" maxlength="15"><br>
+          <p class="err-msg" id="userid-error-msg">비밀번호를 입력해주세요</p>
+         </div>
 
-          <div class="login-btn">
-            <input type="submit" name="btn_text" id="btn_text" value="로그인" onclick="loginForm()">
-          </div>
+        <div class="login-btn">
+          <button type="submit" name="btn_text" id="btn_text" >로그인</button>
+          
+        </div>
+
       </form>
-      </div>
-  
     </div>
-
-  
 </body>
 </html>
