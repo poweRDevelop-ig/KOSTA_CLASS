@@ -35,7 +35,8 @@ h2{
 #membership_pw,
 #membership_pw2,
 #membership_name,
-#phoneNumber
+#phoneNumber,
+#membership_email
 {
     width: 100%;
     height: 20px;
@@ -47,9 +48,9 @@ h2{
     color: black;
 }
 
-#profileImage{
+#profileImagecss{
    margin: 0;
- 
+   width: 300px;
     float: left;
     align-items: center;
     justify-content: center;
@@ -83,6 +84,7 @@ input[type=file]::file-selector-button {
 
 }
 input[type=file]::file-selector-button:hover {
+   
     background: #999999;
     color: #fff;
     cursor: pointer;
