@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // 폼 제출의 기본 동작을 방지
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let check = true;
 
+        
+        
         // 유효성 검사
         let userIdErrorMsg = document.querySelector('#userid-error-msg');
         if (!userId || userId.length < 3 || userId.length > 15) {
@@ -93,7 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const errorMsg = document.querySelector('#radiomsg');
             errorMsg.style.display = 'none'; 
         }
+      
 
+
+        console.log(selectedFile);
+        
         if (check) {
             const formData = new FormData();
             formData.append('userId', userId);
@@ -101,19 +109,25 @@ document.addEventListener('DOMContentLoaded', function() {
             formData.append('userName', userName);
             formData.append('email', email);
             formData.append('phoneNumber', phoneNumber);
-            formData.append('profileImage', selectedFile);
+            formData.append('userImagesURL', selectedFile);
             formData.append('userState', userState.value);
             
-            fetch('http://192.168.0.3:8080/user/signup', {
+            fetch('http://192.168.0.25:8080/user/signup', {
                 method: 'POST',
+                headers: {
+    
+                    'Content-Type': 'multipart/form-data',
+                    'Accept': 'application/json'
+                },
                 body: formData
             })
             .then(res => res.json())
             .then(data => {
                 console.log('서버 응답:', data);
+              
                 if (data.userId) { 
                     alert(`회원가입이 완료 되었습니다.\n 아이디 : ${userId}`);
-                    window.location.href = 'http://127.0.0.1:5500/login_form/login_form.html';
+                    // window.location.href = 'http://127.0.0.1:5500/login_form/login_form.html';
                 } else {
                     alert('회원가입 실패: ' + data.message);
                 }
