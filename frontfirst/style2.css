@@ -15,13 +15,16 @@
     padding: 0px;
     color: #000;
     /* font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Noto Sans KR", sans-serif; */
-    /* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
-    font-family: 'Nanum Pen Script', 'cursive';
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    /* font-family: 'Nanum Pen Script', 'cursive'; */
 
 }
 /* 폰트설정 알아보기 */
 body{
+    /* 해더 사이드바 메인 빼고 모든 영역 백그라운드 */
 
+    background-color: #fffff0;
+    
     
 }
 
@@ -51,7 +54,8 @@ body{
    border-top: none;
    border-left: none;
    border-right: none;
-    background-color: #ffffff;
+   /* 해더부분 백그라운드 컬러 */
+    background-color: #fffff0;
     width: 100%;
     height: 150px;
     background-size: cover;
@@ -315,9 +319,12 @@ input[id*="car_select"]:checked + label + div {max-height: 300px;}
     height: 17px;
     cursor: pointer;
 } 
-
+.accordion .sidebar ul li label p:hover{
+    font-size: 18px;
+    font-style: bold;
+}
 .accordion .sidebar ul li:hover {
-    background-color: #0171BB;
+    background-color: #9ad7ff;
     cursor: pointer;
 }
 
@@ -335,13 +342,20 @@ input[id*="car_select"]:checked + label + div {max-height: 300px;}
     top: 150px;
     left: 200px;
 
+
+
 }
 
 section{
   
     display: flex;
-    background-color: #fff;
-    /* background-color: red; */
+
+    /* 메인 섹션 백그라운드 영역 조정  */
+
+    /* background-color: #fff; */
+    background-color: #FFFFFF;
+
+
     /* width: 1280px; */
     width: calc(1080px);
 
@@ -386,6 +400,7 @@ section .car-icons:nth-child(4n){
 .car-icons:hover{
     height: auto;
     background-color: rgba(255, 255, 255, 0.411);
+
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
     transition: all .35s;
     top: -10px;

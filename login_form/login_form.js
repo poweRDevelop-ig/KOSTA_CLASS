@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       const jasonData = JSON.stringify(loginData);
 
-      console.log(loginData);
-      console.log('+++++')
-      console.log(jasonData);
-      console.log('+++++-')
-      console.log('-+++++-')
+      // console.log(loginData);
+      // console.log('+++++')
+      // console.log(jasonData);
+      // console.log('+++++-')
+      // console.log('-+++++-')
 
 
       fetch('http://192.168.0.25:8080/user/login', {
@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(res => res.json())
         .then(data => {
           if(data.success) {
-            console.log(loginData);
-            console.log('------')
-            console.log(jasonData);
-            console.log('------')
-            console.log(data);
-            console.log('------')
+            // console.log(loginData);
+            // console.log('------')
+            // console.log(jasonData);
+            // console.log('------')
+            // console.log(data);
+            // console.log('------')
 
             
             console.log('서버 응답:', data);

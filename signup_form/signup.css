@@ -57,6 +57,12 @@ h2{
     justify-content: center;
 }
 
+
+#profileImage{
+    width: 75%;
+
+}
+
 button{
    /*
     box-sizing: border-box;
