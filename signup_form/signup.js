@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 console.log(userData);
                 
-                fetch('http://localhost:8080/user/signup', {
+                fetch('http://192.168.0.25:8080/user/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('서버 응답:', data);
                     if (data.userId) { 
                         alert(`회원가입이 완료 되었습니다.\n 아이디 : ${userId}`);
-                        window.location.href = 'http://192.168.0.25:8080/login_form/login_form.html';
+                        window.location.href = 'http://192.168.0.25:8080/user/login';
                     } else {
                         alert('회원가입 실패: ' + data.message);
                     }
