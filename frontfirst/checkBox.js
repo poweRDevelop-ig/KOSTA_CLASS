@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         carTypes: [],
         displacements: [],
         colors: [],
-        modelYears: []
+        carYear: []
     };
 
     // 체크박스 상태 변경 시 실행되는 이벤트 리스너
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedFilters.colors = Array.from(document.querySelectorAll('.accordion input[data-car-color]:checked'))
                                       .map(cb => cb.dataset.carColor)
                                       .filter(value => value.trim() !== '');
-        selectedFilters.modelYears = Array.from(document.querySelectorAll('.accordion input[data-car-modelYear]:checked'))
-                                         .map(cb => cb.dataset.carModelYear)
+        selectedFilters.carYear = Array.from(document.querySelectorAll('.accordion input[data-car-Year]:checked'))
+                                         .map(cb => cb.dataset.carYear)
                                          .filter(value => value.trim() !== '');
     }
 
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedFilters.colors.length > 0) {
             params.append('color', selectedFilters.colors.join(','));
         }
-        if (selectedFilters.modelYears.length > 0) {
-            params.append('carYear', selectedFilters.modelYears.join(','));
+        if (selectedFilters.carYear.length > 0) {
+            params.append('carYear', selectedFilters.carYear.join(','));
         }
 
         // limit과 offset은 항상 포함
