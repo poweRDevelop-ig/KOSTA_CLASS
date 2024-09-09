@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // console.log(data);
             // console.log('------')
 
-            
+            localStorage.setItem('userId', data.userId);
+            localStorage.setItem('userState', data.userState);
+
             console.log('서버 응답:', data);
             alert('로그인 성공');
             // window.location.href = 'http://localhost:63342/kostaFe/frontfirst/frontfirst2.html';
@@ -76,13 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
           console.error('Error:', error);
         });
-    };
+    }
   });
 });
-
-
-
-      
-      
- 
-  

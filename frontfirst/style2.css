@@ -96,8 +96,8 @@ h1{
 .main-nav {
     display: flex; 
     justify-content: flex-start; /* 항목을 왼쪽에 정렬 */
-    margin-left: 50px;
-   
+    margin-left: 5px;
+
     
 }
 .main-nav ul {
@@ -109,9 +109,9 @@ h1{
 }
 
 .main-nav li {
+    display: flex;
     margin-right: 20px; /* 항목 간 간격 설정 */
     font-weight: bold;
- 
 }
 
 .main-nav a {
@@ -486,3 +486,4 @@ section .car-icons:nth-child(4n){
     color: blue;
     transform: scale(1.2);
   }
+
