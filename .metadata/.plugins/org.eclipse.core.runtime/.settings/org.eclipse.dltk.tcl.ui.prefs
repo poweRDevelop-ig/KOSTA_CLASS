@@ -8,6 +8,7 @@ DLTK_class_definition_bold=false
 DLTK_class_definition_strikethrough=false
 DLTK_class_definition_underline=false
 DLTK_comment_task_tag=255,139,255
+DLTK_comment_task_tag_bold=true
 DLTK_default=224,226,228
 DLTK_function_definition=103,140,177
 DLTK_keyword=147,199,99

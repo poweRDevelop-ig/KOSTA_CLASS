@@ -21,7 +21,7 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="543"/>
+		<item key="DIALOG_X_ORIGIN" value="442"/>
 		<item key="DIALOG_Y_ORIGIN" value="217"/>
 		<item key="DIALOG_WIDTH" value="575"/>
 		<item key="DIALOG_HEIGHT" value="659"/>
@@ -37,5 +37,14 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="false"/>
 	</section>
 </section>
