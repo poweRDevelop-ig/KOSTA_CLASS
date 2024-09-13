@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class welcome {
 	static final int NUM_BOOK = 3;
 	static final int NUM_ITEM = 7;
+	static CartItem[] mCartItem = new CartItem[NUM_BOOK];
+	static int mCartCount =0;
 
 	public static void main(String[] args) {
 		
@@ -100,11 +102,22 @@ public class welcome {
 	
 	public static void menuGuestInfo (String name, int mobile) {
 		System.out.println("현재 고객 정보 :");
-		System.out.println("이름 :\t"+name+"\t연락처 :\t"+mobile);
+		//System.out.println("이름 :\t"+name+"\t연락처 :\t"+mobile);
+		Person person = new Person(name, mobile);
+		System.out.println("이름 " + person.getName() + "연락처 " + person.getPhone());
 	}
 	
 	public static void menuCarItemList () {
 		System.out.println("2.장바구니 상품 목록 보기");
+		System.out.println("----------------------------------------------------");
+		System.out.println("      도서ID \t|	수량 \t  |  	  합계");
+		for (int i=0; i<mCartCount; i++) {
+			System.out.print("    "+mCartItem[i].getBookID() + " \t| ");
+			System.out.print("      "+mCartItem[i].getQuantity() +" \t  | ");
+			System.out.print("      "+mCartItem[i].getTotalPrice());
+			System.out.println("  ");
+		}
+		System.out.println("----------------------------------------------------");
 	}
 	
 	public static void menuCartClear () {
@@ -145,13 +158,16 @@ public class welcome {
 				
 				if (str.toUpperCase().equals("Y")) {
 					System.out.println(book[numId][0]+"도서가 장바구니에 추가되었습니다.");
+					//장바구니에 넣기
+					if (!isCartInBook(book[numId][0]))
+						mCartItem[mCartCount++] =new CartItem(book[numId]);
 				}
 					quit = true;
 				}else {
 					System.out.println("다시 입력해 주세요");
 			}
 			
-			}
+		}
 	}
 	
 	public static void menuCartRemoveItemCount () {
@@ -195,6 +211,17 @@ public class welcome {
 		book[2][4] = "컴퓨터 사고력을 키우는 블록코딩";
 		book[2][5] = "컴퓨터 입문";
 		book[2][6] = "2019/06/10";
+	}
+	
+	public static boolean isCartInBook(String bookId) {
+		boolean flag = false;
+		for (int i = 0; i < mCartCount; i++) {
+			if (bookId == mCartItem[i].getBookID()) {
+				mCartItem[i].setQuantity(mCartItem[i].getQuantity()+1);
+				flag = true;
+			}
+		}                                                                                
+		return flag;
 	}
 
 }
