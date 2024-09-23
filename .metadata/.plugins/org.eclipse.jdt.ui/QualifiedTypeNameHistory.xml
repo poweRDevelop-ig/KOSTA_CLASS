@@ -6,4 +6,6 @@
     <fullyQualifiedTypeName name="Vehicle"/>
     <fullyQualifiedTypeName name="TwoWheeler"/>
     <fullyQualifiedTypeName name="Shape"/>
+    <fullyQualifiedTypeName name="CartInterface"/>
+    <fullyQualifiedTypeName name="CartItem"/>
 </qualifiedTypeNameHistroy>

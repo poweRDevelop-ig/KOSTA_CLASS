@@ -13,10 +13,6 @@ public class AccessModifier03 {
 		obj.age = 10;
 		System.out.println("강아지 나이 : " + obj.age);
 		obj.run();
-		
-		obj.name ="다운";
-		System.out.println("강아지 이름 : " + obj.name);
-		obj.slepp();
 	}
 
 }
