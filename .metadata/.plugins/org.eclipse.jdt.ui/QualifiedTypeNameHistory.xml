@@ -8,4 +8,20 @@
     <fullyQualifiedTypeName name="Shape"/>
     <fullyQualifiedTypeName name="CartInterface"/>
     <fullyQualifiedTypeName name="CartItem"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="com.market.bookitem.Book"/>
+    <fullyQualifiedTypeName name="com.market.cart.Cart"/>
+    <fullyQualifiedTypeName name="com.market.member.Admin"/>
+    <fullyQualifiedTypeName name="com.market.member.User"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.market.exception.CartException"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 </qualifiedTypeNameHistroy>

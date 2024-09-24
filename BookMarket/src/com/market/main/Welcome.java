@@ -6,6 +6,7 @@ import com.market.cart.Cart;
 import com.market.member.Admin;
 import com.market.member.Person;
 import com.market.member.User;
+import com.market.exception.CartException;
 
 public class Welcome {
 	static final int NUM_BOOK = 3;
@@ -53,54 +54,60 @@ public class Welcome {
 			
 			menuIntroduction();
 			
-			System.out.println("메뉴 번호를 선택해주세요");
-			int n = input.nextInt();
-			System.out.println(n+"번을 선택했습니다."); 
-			
-			if ( n<1 || n>9) {
-				System.out.println("1부터 9까지의 숫자를 입력해주세요.");
-			}
-			else {
-				switch(n) {
-					case 1:
-//						System.out.println("현재 고객 정보 :");
-//						System.out.println("이름 :\t" + userName + "\t\t연락처 :" + userMobile);
-						menuGuestInfo(userName, userMobile);
-						break;
-					case 2:
-//						System.out.println("장바구니의 상품 목록 보기 :");
-						menuCartItemList();
-						break;
-					case 3:
-//						System.out.println("장바구니 비우기 :");
-						menuCartClear();
-						break;
-					case 4:
-//						System.out.println("장바구니의 항목 추가하기 :");
-						//menuCartAddItem(mBook);
-						menuCartAddItem(mBookList);
-						break;
-					case 5:
-//						System.out.println("장바구니의 항목 수량 줄이기 :");
-						menuCartRemoveItemCount();
-						break;
-					case 6:
-//						System.out.println("장바구니의 항목 삭제하기 :");
-						menuCartRemoveItem();
-						break;
-					case 7:
-//						System.out.println("영수증 표시하기 :");
-						menuCartBill();
-						break;
-					case 8:
-//						System.out.println("종료 :");
-						menuExit();
-						quit = true;
-						break;
-					case 9:
-						menuAdminLogin();
-						break;
+			try {
+				System.out.println("메뉴 번호를 선택해주세요");
+				int n = input.nextInt();
+				
+				if (n < 1 || n > 9) {
+					System.out.println("1부터 9까지의 숫자를 입력하세요.");
 				}
+				else {
+					switch(n) {
+						case 1:
+	//						System.out.println("현재 고객 정보 :");
+	//						System.out.println("이름 :\t" + userName + "\t\t연락처 :" + userMobile);
+							menuGuestInfo(userName, userMobile);
+							break;
+						case 2:
+	//						System.out.println("장바구니의 상품 목록 보기 :");
+							menuCartItemList();
+							break;
+						case 3:
+	//						System.out.println("장바구니 비우기 :");
+							menuCartClear();
+							break;
+						case 4:
+	//						System.out.println("장바구니의 항목 추가하기 :");
+							//menuCartAddItem(mBook);
+							menuCartAddItem(mBookList);
+							break;
+						case 5:
+	//						System.out.println("장바구니의 항목 수량 줄이기 :");
+							menuCartRemoveItemCount();
+							break;
+						case 6:
+	//						System.out.println("장바구니의 항목 삭제하기 :");
+							menuCartRemoveItem();
+							break;
+						case 7:
+	//						System.out.println("영수증 표시하기 :");
+							menuCartBill();
+							break;
+						case 8:
+	//						System.out.println("종료 :");
+							menuExit();
+							quit = true;
+							break;
+						case 9:
+							menuAdminLogin();
+							break;
+					
+					}
+				}
+			}
+			catch (Exception e) {
+				System.out.println("올바르지 않은 메뉴 선택으로 종료합니다.");
+				quit = true;
 			}
 		
 		}
