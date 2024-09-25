@@ -1,6 +1,6 @@
 import java.io.File;
 
-public class FileHand01 {
+public class FileHandling01 {
 	public static void main (String[] args) {
 		
 		File finfo = new File("src\\Example01.java");
