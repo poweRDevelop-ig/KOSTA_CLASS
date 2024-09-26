@@ -71,6 +71,6 @@ public class CartItem {
 
 	public void updateTotalPrice() {
 		//totalPrice = Integer.parseInt(this.itemBook[2])*this.quantity;
-		totalPrice = this.itemBook.getUnitPrice() * this.quantity;
+		totalPrice = this.itemBook.getUnitPrice()*this.quantity;
 	}
 }
