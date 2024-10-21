@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class Square {
+            #length     //#메소드이름 : private속성.
+
+                    constructor (length) {
+                        if(length <=0) {
+                            throw '길이는 0보다 커야합니다.'
+                        }
+                    this.#length = length
+                    }
+
+                    //정사각형의 둘레를 구하는 메소드
+                    getPerimeter() {return 4*this.#length}
+
+                    //정사각형의 넓이르 구하느 메소드
+                    getArea() { return this.#length*this.#length}
+                }
+
+
+                //클래스 사용하기
+                const square = new Square(10)
+                square.length = -10//               //갠세이 넣어도 private 속성 때문에 ㄱㅊ
+                //square.length = -10 이렇게 해도 SyntaxError 뜸
+                console.log(`정사각형의 둘레 : ${square.getPerimeter()}`)
+                console.log(`정사각형의 넓이 : ${square.getArea()}`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

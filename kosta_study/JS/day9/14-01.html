@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script src="jquery.imagesloaded.min.js"></script>
+    <script src="jquery.masonry.min.js"></script>
+
+    <script>
+
+        //풀다운메뉴
+        $(document).ready(function () {
+            //풀다운 메뉴
+            $('.outer-menu').hover(function () {
+                $(this).find('.inner-menu').css('display', 'block')
+            }, function () {
+                $(this).find('.inner-menu').css('display', 'none')
+            })
+        })
+
+        //페이지
+        $(document).ready(function () {
+            //이미지로드확인
+            $('#main-section').imagesLoaded(function () {
+                //jQuery Masonry 플러그인 적용
+                $('#main-section').masonry({
+                    itemSelector: '.paper',
+                    columnWidth: 230,
+                    isAnimated: true
+                })
+            })
+        })
+
+        //라이트박스
+        $(document).ready(function () {
+            function showLightBox () {
+                //라이트박스를 보이게 합니다.
+                $('#darken-background').show();
+                $('#darken-background').css('top', $(window).scrollTop())
+                //스크롤을 못하게 합니다
+                $('body').css('overflow', 'hidden')
+            }
+
+            function hideLightBox () {
+                //라이트박스를 보이지 않게 합니다
+                $('#darken-background').hide()
+
+                //스크롤을 하게 합니다
+                $('body').css('overflow', '')
+            }
+
+            //라이트박스 제거 이벤트
+            $('#darken-background').click(function () {
+                hideLightBox();
+            })
+
+            //클릭이벤트연결
+            $('.paper').click(function () { showLightBox() })
+
+            //라이트박스 제거 이벤트 보조
+            $('#lightbox').click(function (event) {
+                event.stopPropagation()
+            })
+        })
+
+    </script>
+
+
+</head>
+<body>
+
+    <!------- 헤더 ------->
+     <header id="main-header">
+        <div class="header-search-form">
+            <form action="">
+                <input type="search" class="input-search">
+                <input type="submit" class="input-search-submit" value="검색">
+            </form>
+        </div>
+        <h1 class="header-title">Interest</h1>
+        <div class="header-menu">
+            <ul class="outer-menu">
+                <li>
+                    <a href="#">정보</a>
+                    <ul class="inner-menu">
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="outer-menu">
+                <li>
+                    <a href="#">사용자</a>
+                    <ul class="inner-menu">
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+     </header>
+
+     <!------- 네비게이션 메뉴 ------->
+     <nav id="main-navigation">
+        <ul>
+            <li><a href="#">Following</a></li>
+            <li><a href="#">Categoies</a></li>
+            <li><a href="#">Everything</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Gift</a></li>
+        </ul>
+     </nav>
+
+     <!------- 본문 영역 ------->
+     <section id="main-section">
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div> 
+        <!--  -->
+        <div class="paper">
+            <div class="paper-holder">
+                <a><img width="190" src="http://via.placeholder.com/190x306" alt=""></a>
+            </div>                              
+            <p class="paper-description">Lorem ipsum dolor sit amet</p>
+            <div class="paper-content">
+                <a class="paper-link" href="#">
+                    <img src="http://via.placeholder.com/190x100" alt="">
+                </a>
+                <p class="paper-text">Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>   
+     </section>
+
+     <!------- 라이트 박스 ------->
+     <div id="darken-background">
+        <div id="lightbox">
+            <div class="user-information">
+                <a class="user-information-image" href="#">
+                    <img src="http://placeholder.it/70x70" alt="">
+                </a>
+                <div class="user-information-text">
+                    <h3>User</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <hr class="lightbox-splitter">
+            <img src="http://placeholder.it/600x750" alt="">
+        </div>
+     </div>
+</body>
+</html>

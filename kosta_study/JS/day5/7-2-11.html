@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const img = document.querySelectorAll('img')
+
+            imgs.forEach((img) => {
+                img.addEventListener('contextmenu', (event) => {
+                    event.preventDefault()      //컨텍스트 메뉴를 출력하느 기본 이벤트를 제거
+                })                              //좌클릭 막힘(효과가?)
+            })
+        })
+        
+
+    </script>
+</head>
+<body>
+    <img src="https://picsum.photos/id/237/200/300" alt="">
+</body>
+</html>

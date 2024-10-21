@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        /*
+        [[  유효성 검사  ]]
+          일반적으로 입력 양식의 유을 검사하려고 기본 이벤트를 제거
+          양식이 맞는지 검사하는 것
+        */
+
+        $(document).ready(function (event) {
+          //input 태그의 값을 추출합ㄴ디ㅏ
+          let value = $('input').val();
+
+          //유효성을 검사합니다.
+          if (value.replace(/[가-힣]/g, '').length == 0) {
+            //유효성 검사 통과
+            alert('과정을 진행합니다.')
+          } else {
+            //유효성 검사 실패
+            alert('한글 이름을 입력해주세요.')
+            event.preventDefault()
+          }
+        })
+
+        //return false 도 찾아보기
+    </script>
+</head>
+<body>
+    <form action="">
+      <label for="">이름</label>
+      <input type="text" name="" id="">
+      <input type="submit">
+    </form>
+</body>
+</html>

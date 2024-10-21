@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        class Square {
+                    #length     //#메소드이름 : private속성.
+
+                    constructor(length) {
+                        this.setLength(length)
+                    }
+                    
+                    setLength (value) {
+                        if(value <=0) {
+                            throw '길이는 0보다 커야합니다'
+                        }
+                        this.#length = value
+                    }
+
+                    getLenght (value) {
+                        return this.#length
+                    }
+
+                    getPerimeter() {return 4*this.#length}
+                    getArea() { return this.#length*this.#length}
+                }
+
+                //클래스 사용하기
+                const square = new Square(10)
+                console.log(`한 변의 길이는 ${square.getLenght()}입니다`)
+
+                //예외 발생시키키
+                square.setLength(-5)
+                console.log(`한 변의 길이는 ${square.getLenght()}입니다`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

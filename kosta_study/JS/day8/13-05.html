@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EiChiTiEmEl PaiBu</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Rbotbo, "Helvetica Neue", Arial, sans-serif
+        }
+        a {text-decoration: none;}
+        img {border:0}
+        li{list-style: none;}
+        /* 공통 구성 */
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-left: 10px;
+        }
+        /* 헤더 구성 */
+        #main-header {
+            padding: 10px 5px;
+        }
+        #main-header h1 {
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 27px;
+            color: #222;
+        }
+        #main-header ul {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #main-header li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #main-header li a {
+            color: #555;
+        }
+        #main-header li.active a {
+            color: black;
+            font-weight: 500;
+        }                             
+        #main-header label {
+            text-align: center;
+            float: right;
+            width: 40px;
+            height: 27px;
+            line-height: 27px;
+            color: #222;
+            border: 1px solid #222;
+            border-radius: 5px;
+        } 
+        #checkbox {
+            display: none;
+        }
+        #checkbox + nav {
+            display: block;
+        }
+        #checkbox:checked + nav {
+            display: none;
+        }
+        /* 본문과 푸터 */
+        #main-content {
+            background: #00afa0;
+            padding: 40px 15px 30px;
+        }
+        #main-content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 500px;
+        }
+        #main-content p {
+            color: #222;
+            text-align: center;
+            color: white;
+        }
+        #sub-content {
+            padding-top: 30px;
+        }
+        #sub-content h1 {
+            text-align: center;
+            color: #333;
+        }
+        #sub-content h2 {
+            text-align: center;
+            color: #333;
+            font-style: 17px;
+        }
+        #sub-content img {
+            width: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+        #main-footer {
+            padding-top: 40px;
+        }
+        footer {
+            background: #323232;
+            color: white;
+            font-style: 12px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main-header">
+        <header class="container">
+            <div>
+                <label for="chedckbox">▼</label>
+                <h1>Hanbit</h1>
+            </div> 
+            <input type="checkbox" checked="checked" id="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="#">Brand</a></li>
+                    <li class="active"><a href="#">Network</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#"></a>Support</li>
+                </ul>
+            </nav>
+        </header> 
+    </div>
+    <div id="main-content">
+        <article class="container">
+            <h1>Lorem ipsum dolor sit ame</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan orci eget nibh tincidunt dignissim.
+                Morbi vel gravida risus. Mauris orci sapien, auctor a ultricies eu, pulvinar eu diam. Nulla sed lectus neque. 
+                Nam at quam sed dui varius auctor. Donec volutpat et ligula porttitor porttitor. Vestibulum non diam accumsan,
+                tincidunt quam ut, gravida diam. Nulla placerat eget turpis sed feugiat. Curabitur nunc sapien, porta sed leo vel, 
+                viverra vulputate lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac 
+                turpis egestas. Aliquam pretium libero ac tincidunt ultrices. Curabitur pretium orci id tortor efficitur, 
+                vitae lacinia velit tincidunt.</p>
+        </article>
+    </div>
+    <div id="sub-content">
+        <article class="container">
+            <h1>혼자 공부하는 딥러닝</h1>
+            <h2>머라머라 배우는 자습이 어쩌구</h2>
+            <img src="../img/pg.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan orci eget nibh tincidunt dignissim.
+                Morbi vel gravida risus. Mauris orci sapien, auctor a ultricies eu, pulvinar eu diam. Nulla sed lectus neque. 
+                Nam at quam sed dui varius auctor. Donec volutpat et ligula porttitor porttitor. Vestibulum non diam accumsan,
+                tincidunt quam ut, gravida diam. Nulla placerat eget turpis sed feugiat. Curabitur nunc sapien, porta sed leo vel, 
+                viverra vulputate lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac 
+                turpis egestas. Aliquam pretium libero ac tincidunt ultrices. Curabitur pretium orci id tortor efficitur, 
+                vitae lacinia velit tincidunt.</p>
+            <h1>손글씨가 어쩌구저쩌구</h1>
+            <h2>머라머라 배우는 자습이 어쩌구</h2>
+            <img src="../img/flo1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan orci eget nibh tincidunt dignissim.
+                Morbi vel gravida risus. Mauris orci sapien, auctor a ultricies eu, pulvinar eu diam. Nulla sed lectus neque. 
+                Nam at quam sed dui varius auctor. Donec volutpat et ligula porttitor porttitor. Vestibulum non diam accumsan,
+                tincidunt quam ut, gravida diam. Nulla placerat eget turpis sed feugiat. Curabitur nunc sapien, porta sed leo vel, 
+                viverra vulputate lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac 
+                turpis egestas. Aliquam pretium libero ac tincidunt ultrices. Curabitur pretium orci id tortor efficitur, 
+                vitae lacinia velit tincidunt.</p>
+        </article>
+        </article>
+    </div>
+    <div id="main-footer">
+        <footer class="container">
+            <div>@9283-2378 Example. All righrt reserved</div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        try{                        //예외가 발생ㅎ랄 가능성이 있는 코드
+            willExcept.byeBye()
+            console.log("try 구문의 마지막 줄")
+        }catch (exception){
+            console.log("catch 구문의 마지막 줄")
+        }//finally {}
+
+
+        try{                        //예외가 발생할 가능성이 있는 코드
+            willExcept.byeBye()
+            console.log("try 구문의 마지막 줄")
+        }catch (exception){
+            console.log("catch 구문의 마지막 줄")
+        }finally{
+            console.log("finally 구문의 마지막 줄") //예외 발생 여부와 상관 없이 무조건 실행됨
+        }                                           //try 구문 내부에 있는 예외가 발생되는 코드를 지우고도 테스트 해 볼 것
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

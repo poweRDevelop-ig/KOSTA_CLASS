@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            //이벤트 연결
+            $('button').click(function () {
+                //이벤트연결
+                $('.page').fadeToggle('slow')
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lorem Ipsum</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus massa sem, f
+            eugiat et laoreet et, posuere ut quam. Interdum et malesuada fames ac ante ipsum 
+            primis in faucibus. Maecenas cursus magna risus, ultrices euismod arcu porttitor 
+            vitae. Vivamus augue est, aliquam cursus velit at, interdum vestibulum massa. Ves
+            tibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            Quisque sed scelerisque nibh. Morbi in rutrum magna, nec hendrerit nisl. 
+            Pellentesque sagittis vel ante in convallis. Sed porttitor, mauris non convallis varius,
+            neque quam mollis sem, vitae facilisis nisi ex a odio. Aliquam erat volutpat. 
+            Phasellus luctus molestie nulla, sed vestibulum massa porttitor nec.
+        </p>
+    </div>
+</body>
+</html>

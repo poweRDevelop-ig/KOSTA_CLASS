@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /*
+    function() {} 형태로 선언하는 익명함수와 () => {} 형태로 선언하는 화살효 함수는 
+    객체의 메소드로 사용될 때 this 키워드를 다루는 방식이 다름
+    */
+
+        //변수를 선언
+        const test = {
+            a:function () {         //익명 함수로 선언
+                console.log(this)
+            },
+            b:()=>{                 //화살표 함수로 선언
+                console.log(this)
+            }
+        }
+
+        //메소드를 호출합니다
+        test.a()
+        test.b()
+
+        /*
+        요소란 배열 내부에 있는 값을 의미
+        속성은 객체 내부에 있느 ㄴ값을 의미
+        메소든 속성 중에 함수 자료형인 ㄱ섯을 
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

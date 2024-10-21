@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            객체의 속성이 있는지 확인하고 있다면 해당 속성을 없다면 별도의 문자열을 지정하느 코드    
+        */
+
+        //객체를 생성합니다
+        const object = {
+            name:'혼자 공부하는 파이썬',
+            price:18000,
+            publisher:'한빛미디어'
+        }
+
+        //객체의 기본 속성을 지정합니다.
+        //없는 속성이 있으면 넣을게~
+        object.name = object.name !== undefined ? object.name:'제목 미정'
+        object.author = object.author !== undefined ? object.author:'저자 미상'
+
+        //객체를 출력합니다
+        console.log(JSON.stringify(object, null, 2))
+
+        /*
+        객체의 기본 속성을 지정합니다.
+        object.name = object.name||'제목미정'
+        object.author = object.author||'제목미정'
+        */
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

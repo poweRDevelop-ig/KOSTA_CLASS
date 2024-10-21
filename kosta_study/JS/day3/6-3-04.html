@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+
+            [[[   배열전개 연산자, **얕은 복사**   ]]]
+
+            배열과 객체는 할당할 때 얕은 복사라는 것이 이루어짐
+            밑에는 두개가 같으 값이 나옴
+            배열은 복사해도 다른 이름이 붙을 뿐. 이를 얕은 복사(참조 복사)라고 부른다
+            
+            주소만 복사해와서 상태가 바뀌면 복사된 값도 바뀜
+
+        */
+
+        //사야하는 물건 목록
+        const 물건_200301 = ['우유','식빵']                 //메모리값만 복사
+        const 물건_200302 = 물건_200301
+        물건_200302.push('고구마')
+        물건_200302.push('토마토')
+
+        //출력
+        console.log(물건_200301)
+        console.log(물건_200302)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

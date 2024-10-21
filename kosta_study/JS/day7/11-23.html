@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+
+        // [[  상대적 증가  ]]
+
+        $(document).ready(function () {
+            //스타일을 변경
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'red',
+                position: 'absolute',
+                left: 10,
+                top: 10
+            }).animate({
+                height: '+=300', //기존 값에서 +300
+                width: '-=50',
+                left: '+=300',
+                opacity: 0.5
+            }, 5000)
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>
