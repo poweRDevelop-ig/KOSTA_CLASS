@@ -1,0 +1,117 @@
+*{
+ 
+    margin: 0px;
+    padding: 0px;
+    margin: 0 auto;   
+    justify-content: center;
+    align-items: center;
+    background-color: #fffffa;
+
+}
+.membership{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h2{
+    font-size: 30px;
+}
+.form_membership {
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3F73D2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    /* background-color: ; */
+}
+
+.mbs_id {
+    width: 80%;
+    font-size: 15px;
+    margin-top: 10px;
+    /* background-color: orange; */
+}
+#membership_id,
+#membership_pw,
+#membership_pw2,
+#membership_name,
+#phoneNumber,
+#membership_email
+{
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    border-radius: 16px;
+    background-color: orange(256, 256, 256, 0.05);
+    border: 1px solid #3F73D2;
+    color: black;
+}
+
+#profileImagecss{
+   margin: 0;
+   width: 300px;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#profileImage{
+    width: 75%;
+
+}
+
+button{
+   /*
+    box-sizing: border-box;
+    padding: 20px 16px;
+ */
+   margin-top: 15px;
+   margin-bottom: 15px;
+   width: 100px;
+    height: 30px;
+    color: black;
+    font-size: 1.5m;
+    border: none;
+    background-color: #B2C8F2;
+    cursor: pointer;
+    border-radius: 15px;
+   
+}
+
+input[type=file]::file-selector-button {
+  width: 150px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #3F73D2;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+input[type=file]::file-selector-button:hover {
+   
+    background: #999999;
+    color: #fff;
+    cursor: pointer;
+  }
+.err-msg{
+    color:red;
+    padding: 0 16px;
+    font-size: 14px;
+    display: none;
+}
+
+
+/* 
+.button {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    justify-content: center;
+} */
